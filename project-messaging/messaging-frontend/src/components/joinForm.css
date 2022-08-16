@@ -1,0 +1,73 @@
+html{
+    background-color: #33373B;
+}
+@media screen and (min-width:700px) {
+    #roomForm{
+        width: 50vw;
+        height: 50vh;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%,-50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        border-radius: 25px 0 25px 0;
+        background-color: #3E85B1;
+        color: #F0E7EA;
+    }
+    #roomForm input{
+        width: 80%;
+        height: 50px;
+        border-radius: 10px;
+        border: none;
+    }
+    #enterRoom{
+        width: fit-content;
+        height: fit-content;
+        padding: 10px 20px;
+        background-color: #F0E7EA;
+        color: #3E85B1;
+        border-radius: 5px;
+        text-decoration: none;
+        font-weight: bolder;
+        transition: all .3s;
+    }
+    #enterRoom:hover{
+        box-shadow: 5px 5px 12px #000;
+    }
+}
+@media screen and (max-width: 699px) {
+    #roomForm{
+        width: 80vw;
+        height: 300px;
+        border: 1px solid white;
+        display: flex;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        color: #F0E7EA;
+        background-color: #3E85B1;
+        border-radius: 0 15px;
+    }
+    #roomForm input{
+        width: 80%;
+        height: 40px;
+        border: none;
+        border-radius: 10px;
+    }
+    #roomForm a{
+        text-decoration: none;
+        color: #3E85B1;
+        background-color: #F0E7EA;
+        border-radius: 10px;
+        padding: 10px;
+    }
+}
