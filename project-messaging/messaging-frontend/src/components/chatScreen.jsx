@@ -35,7 +35,7 @@ export default class ChatScreen extends React.Component {
         return (
             <>
                 <div ref={this.messageScreenRef} id="messages">
-                    
+
                 </div>
                 <div id="controller">
                     <input ref={this.inputRef} onChange={(event) => {

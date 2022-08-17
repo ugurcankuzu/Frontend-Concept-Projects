@@ -8,12 +8,12 @@ const io = new Server(httpServer, {
     cors: 'http://localhost:3000'
 })
 
-io.on('connect_error',(socket)=>{
+io.on('connect_error', (socket) => {
     console.log("Error Occured");
     socket.destroy()
 })
 io.on('connection', (socket) => {
-    console.log(socket.id)
+    console.log(socket.id);
     socket.on('change-nick', (userName) => {
         socket.userName = userName;
         console.log(`Nickname has taken successfully! ${socket.id} identified socket's name is ${socket.userName}`);
