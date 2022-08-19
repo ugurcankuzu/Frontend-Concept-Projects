@@ -26,6 +26,7 @@ export default class ChatScreen extends React.Component {
         div.appendChild(innerDiv);
         div.className = `message ${message.sender === socket.userName ? "me" : "other"}`;
         this.messageScreenRef.current.appendChild(div);
+        this.setState({ yourMessage: "" });
 
     }
     componentDidMount() {
@@ -42,8 +43,10 @@ export default class ChatScreen extends React.Component {
                         this.setState({ yourMessage: event.target.value })
                     }} type="text" placeholder="Enter your message..." id="message" />
                     <button onClick={() => {
-                        socket.emit('send-message', this.state.yourMessage);
-                        this.inputRef.current.value = "";
+                        if (this.state.yourMessage !== "") {
+                            socket.emit('send-message', this.state.yourMessage);
+                            this.inputRef.current.value = "";
+                        }
                     }} id="send"><FiSend /></button>
                 </div>
             </>
